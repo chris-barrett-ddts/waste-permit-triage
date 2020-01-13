@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% set title = "Application costs" %}
+
+{% block pageTitle %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Application costs</h1>
+
+    <form method="post" autocomplete="off" novalidate >
+
+                    <table class="responsive-table govuk-table govuk-!-margin-bottom-1"  role="grid">
+                      <caption class="govuk-table__caption govuk-visually-hidden">Facility type</caption>
+                        <thead class="govuk-table__header">
+                          <tr role="row">
+                            <th scope="col" role="columnheader"class="govuk-table__header" >Facility</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body ">
+                          <tr role="row">
+                            <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Facility</span>{{ data['type-facility'] }}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="govuk-body govuk-!-margin-bottom-6 govuk-!-font-size-16">
+                      <a href="/v02/facility-type" class="govuk-link govuk-link--no-visited-state">Change your facility</a>
+                    </p>
+
+                    <table class="responsive-table govuk-table govuk-!-margin-bottom-1"  role="grid">
+                      <caption class="govuk-table__caption govuk-visually-hidden">Activities</caption>
+                      <thead class="govuk-table__header">
+                        <tr role="row">
+                          <th scope="col" role="columnheader"class="govuk-table__header" >Activity</th>
+                          <th scope="col"  role="columnheader" class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold" >Cost</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body ">
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>Biological treatment of waste - not composting</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£10,141.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>Chemical treatment of waste (Shropshire)</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£8,116.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-50% discount for a multiple activity</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>-£4,058.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>Chemical treatment of waste (Berkshire)</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£8,116.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-90% discount for a duplicate activity</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>-£7,304.40</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                    <p class="govuk-body govuk-!-margin-bottom-6 govuk-!-font-size-16">
+                      <a href="/v02/activities" class="govuk-link govuk-link--no-visited-state">Change your activities</a>
+                    </p>
+
+                    <table class="responsive-table govuk-table govuk-!-margin-bottom-1"  role="grid">
+                      <caption class="govuk-table__caption govuk-visually-hidden">Assessments</caption>
+                      <thead class="govuk-table__header">
+                        <tr role="row">
+                          <th scope="col" role="columnheader" class="govuk-table__header" >Assessment</th>
+                          <th scope="col"  role="columnheader"class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold" >Cost</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Dust and emissions management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,241.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Fire prevention plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,241.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Habitats assessment</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£779.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Noise and vibration emissions documents</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,246.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Odour management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>Included in activity cost</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Pest management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>1,241.00</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Waste recovery plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>1,231.00</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                    <p class="govuk-body govuk-!-margin-bottom-6 govuk-!-font-size-16">
+                      <a href="/v02/add-assessments" class="govuk-link govuk-link--no-visited-state ">Change your assessments</a>
+                    </p>
+
+                    <table class="responsive-table govuk-table "  role="grid">
+                      <caption class="govuk-table__caption govuk-visually-hidden">Total cost of the application</caption>
+                      <thead class="govuk-table__header">
+                        <tr role="row">
+                          <th scope="col" role="columnheader" class="govuk-table__header">Application</th>
+                          <th scope="col" role="columnheader" class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold" >Total cost</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell  govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application</span>Cost to apply for Environmental permit</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application total cost</span>£21,989.60</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <p class="govuk-body">You must pay these charges before we will start assessing your application. You do not pay VAT on these costs.</p>
+                    <p class="govuk-body">We automatically apply discounts for additional activities, because we assume they’re reasonably associated.</p>
+                    <p class="govuk-body">We will validate these discounts during the duly making process and will charge 100% for any activity we find is not reasonably associated.</p>
+                    <p class="govuk-body">  You can find out more about our charges in the <a href="https://www.gov.uk/government/publications/environmental-permitting-charges-guidance" class="govuk-link">Environmental permitting charges guidance (opens new tab)</a>.</p>
+
+                    {{ govukButton({
+                      text: "Start application"
+                    }) }}
+      </form>
+  </div>
+</div>
+
+{% endblock %}

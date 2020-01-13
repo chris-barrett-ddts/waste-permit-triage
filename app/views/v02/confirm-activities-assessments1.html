@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% set title = "Confirm activities and assessments" %}
+
+{% block pageTitle %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "/v02/add-assessments"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">Confirm activities and assessments</h1>
+
+
+      <form method="post" autocomplete="off" novalidate >
+
+                <table class="responsive-table govuk-table "  role="grid">
+        <!--  <caption class="heading-medium govuk-table__caption"><h2 class="govuk-heading-m">Facility</h2></caption> -->
+                <thead class="govuk-table__header">
+                  <tr role="row">
+                   <th scope="col" class="govuk-table__header">Facility</th>
+
+                  <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><a href="/v02/facility-type">
+                      Change<span class="govuk-visually-hidden"> facility</span>
+                    </a></td>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body " >
+                  <tr role="row">
+                    <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric" colspan="2"><span class="table-heading"  aria-hidden="true">Facility</span>{{ data['type-facility'] }}</td>
+                  </tr>
+</tbody>
+
+
+</table>
+
+<table class="responsive-table govuk-table "  role="grid">
+                <thead class="govuk-table__header">
+                  <tr role="row">
+                    <th scope="col" class="govuk-table__header" >Activities</th>
+                 <td role="gridcell"  class="govuk-table__cell govuk-table__cell--numeric"><a href="/v02/activities">
+                      Change<span class="govuk-visually-hidden"> activities</span>
+                    </a></td>
+
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body ">
+                  {% for i in allactivities %}
+                  <tr role="row">
+                    <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>{{ [i] }}</td>
+                    <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Charge</span>£xxxx</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+
+</table>
+<table class="responsive-table govuk-table "  role="grid">
+                    <thead class="govuk-table__header">
+                      <tr role="row">
+                        <th scope="col" class="govuk-table__header" >Assessments</th>
+                       <td role="gridcell"  class="govuk-table__cell govuk-table__cell--numeric"><a href="/v02/add-assessments">
+                          Change<span class="govuk-visually-hidden"  aria-hidden="true"> assessments</span>
+                        </a></td>
+
+
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      {% for i in allassessments %}
+                      <tr role="row">
+                        <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>{{ [i] }}</td>
+                        <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Charge</span>£xxxx</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+</table>
+
+
+<table class="responsive-table govuk-table "  role="grid">
+                        <thead class="govuk-table__header">
+                          <tr role="row">
+                            <th scope="col" class="govuk-table__header" colspan="2">Total application costs</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr role="row">
+                            <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Application cost</span>Total</td>
+                            <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Charge</span>£xxxx</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+  <p class="govuk-body">You must pay these charges before we will start assessing your application. You do not pay VAT on these costs.</p>
+    <p class="govuk-body">We automatically apply discounts for additional activities, because we assume they’re reasonably associated.</p>
+<p class="govuk-body">
+    We will validate these discounts during the duly making process and will charge 100% for any activity we find is not reasonably associated.</p>
+  <p class="govuk-body">  You can find out more about our charges in the <a href="https://www.gov.uk/government/publications/environmental-permitting-charges-guidance" class="govuk-link">Environmental permitting charges guidance (opens new tab)</a>.</p>
+      {{ govukButton({
+        text: "Start application"
+      }) }}
+      </form>
+
+{% endblock %}

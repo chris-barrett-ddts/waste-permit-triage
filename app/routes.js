@@ -7,11 +7,18 @@ const router = express.Router()
 var activities = []
 var assessments = []
 
+
+
+
 // //////////////////////////////
 //INDEX PAGE
 router.get('/', function(req, res) {
+
     res.render('index');
 });
+
+
+
 
 
 // //////////////////////////////
@@ -354,6 +361,18 @@ if ((activities.indexOf('Biological treatment of waste - not composting') > -1 |
 //CONFIRMATION AND START APPLICATION
 router.get('/v02/confirm-activities-assessments', function(req, res) {
     res.render('v02/confirm-activities-assessments', { 'allactivities' : activities, 'allassessments' : assessments });
+});
+
+
+// //////////////////////////////
+//CONFIRMATION AND START APPLICATION
+router.get('/application-costs/confirm-activities-assessments', function(req, res) {
+  var activities = []
+  if (activities = []){
+  activities.push("Biological treatment of waste - not composting");
+};
+
+    res.render('application-costs/confirm-activities-assessments', { 'allactivities' : activities, 'allassessments' : assessments });
 });
 
 

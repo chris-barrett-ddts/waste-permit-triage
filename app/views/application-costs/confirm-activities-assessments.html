@@ -12,7 +12,7 @@
 
   {{ govukBackLink({
     text: "Back",
-    href: "/v02/add-assessments"
+    href: "/"
   }) }}
 {% endblock %}
 
@@ -47,7 +47,7 @@
                     </p>
 
                     <table class="responsive-table govuk-table govuk-!-margin-bottom-1"  role="grid">
-                      <caption class="govuk-table__caption govuk-visually-hidden">Activities selected</caption>
+                      <caption class="govuk-table__caption govuk-visually-hidden">Activities</caption>
                       <thead class="govuk-table__header">
                         <tr role="row">
                           <th scope="col" role="columnheader"class="govuk-table__header" >Activity</th>
@@ -58,7 +58,7 @@
                         {% for i in allactivities %}
                         <tr role="row">
                           <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Activity</span>{{ [i] }}</td>
-                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Charge</span>£xxxx</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£10,141</td>
                         </tr>
                         {% endfor %}
                       </tbody>
@@ -69,7 +69,7 @@
                     </p>
 
                     <table class="responsive-table govuk-table govuk-!-margin-bottom-1"  role="grid">
-                      <caption class="govuk-table__caption govuk-visually-hidden">Assessments selected</caption>
+                      <caption class="govuk-table__caption govuk-visually-hidden">Assessments</caption>
                       <thead class="govuk-table__header">
                         <tr role="row">
                           <th scope="col" role="columnheader" class="govuk-table__header" >Assessment</th>
@@ -77,12 +77,42 @@
                         </tr>
                       </thead>
                       <tbody class="govuk-table__body">
-                        {% for i in allassessments %}
+
                         <tr role="row">
-                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>{{ [i] }}</td>
-                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Charge</span>£xxxx</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Dust and emissions management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,241</td>
                         </tr>
-                        {% endfor %}
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Fire prevention plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,241</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Habitats assessment</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£779</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Noise and vibration emissions documents</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>£1,246</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Odour management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>Included in activity cost</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Pest management plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>1,241</td>
+                        </tr>
+
+                        <tr role="row">
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric"><span class="table-heading"  aria-hidden="true">Assessment</span>Waste recovery plan</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Cost</span>1,231</td>
+                        </tr>
+
                       </tbody>
                     </table>
 
@@ -100,8 +130,8 @@
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr role="row">
-                          <td role="gridcell" class="govuk-table__cell  govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application</span>Environmental waste permit</td>
-                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application total cost</span>£xxxx</td>
+                          <td role="gridcell" class="govuk-table__cell  govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application</span>Cost to apply for Environmental permit</td>
+                          <td role="gridcell" class="govuk-table__cell govuk-table__cell--numeric numeric govuk-!-font-weight-bold"><span class="table-heading govuk-table__cell--numeric" aria-hidden="true">Application total cost</span>£17,120</td>
                         </tr>
                       </tbody>
                     </table>
