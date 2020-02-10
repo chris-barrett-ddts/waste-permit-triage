@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Complete and upload a site condition report
+      </h1>
+
+      <ol class="govuk-list govuk-list--number">
+
+      <li><a href= "">Download</a> a copy of the H5 Site Condition Report template and guidance (opens new tab).</li>
+
+      <li>Complete sections 1 to 3 of the report template and save it</li>
+
+      <li>Check that your site plans include all the items listed in this report</li>
+
+      <li>Upload the completed report</li>
+
+      <li>If you have prepared additional site plans for the site condition report, upload them here too</li>
+    </ol>
+
+      <div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data">
+
+  <div class="moj-multi-file-upload">
+    <div class="moj-multi-file__uploaded-files ">
+      <h2 class="govuk-heading-m">Files added</h2>
+      <div class="govuk-summary-list moj-multi-file-upload__list">
+
+      </div>
+    </div>
+
+    <div class="moj-multi-file-upload__upload">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="documents">
+          Upload a file
+        </label>
+
+        <span id="waste-hint" class="govuk-hint">30mb max file size</span>
+
+        <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+      </div>
+
+      <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+        Upload file
+      </button>
+
+    </div>
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+</form>
+</div>
+</div> 
+
+{% endblock %}
+
