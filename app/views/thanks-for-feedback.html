@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% set title = "Feedback" %}
+
+{% block pageTitle %}
+  {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "/feedback-form"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Thank you for your feedback</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>We will use your feedback to improve our services.</p>
+
+        <p>Return to <a href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs">Department for Environment Food & Rural Affairs.</a></p>
+
+      <h3 class="govuk-heading-m">Help improve <a href="https://www.gov.uk/">GOV.UK</a></h3>
+
+      <p>GOV.UK needs your help to improve and to make sure the website works well for the people who need it.
+
+      <p><a href="https://signup.take-part-in-research.service.gov.uk/">Get involved in making government services better</a></p>
+
+
+
+
+        
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
