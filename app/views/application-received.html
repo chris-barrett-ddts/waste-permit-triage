@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% set title = "Feedback" %}
+
+{% block pageTitle %}
+  {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase_banner_beta.html" %}
+
+  
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/feedback-form" method="post">
+
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Application received
+  </h1>
+  <div class="govuk-panel__body">
+    Your reference number<br><strong>EPR/WE5700MG/A001</strong>
+  </div>
+</div>
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>We have emailed a confirmation to matthew.solle@defra.gov.uk</p>
+
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        What happens next
+      </h1>
+    </legend>
+
+<p>We will check your application and run checks on the prospective permit holder and any other relevant people</p>
+
+<p>It can take up to 13 weeks to issue a new permit. It may take longer if the information you have provided does not meet the requirements</p>
+
+<p><a href="https://www.gov.uk">How we make decisions about permits</a></p>
+
+<p>Tell us what you think of the service</p>
+
+
+
+    
+        <button class="govuk-button" data-module="govuk-button">Give us your feedback</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
